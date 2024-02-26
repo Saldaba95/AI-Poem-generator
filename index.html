@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>🦋 AI Poem Generator 🩶</title>
   </head>
   <body>
     <div class="container">
       <header><h1>Welcome to the poem Generator</h1></header>
       <main>
-        <form>
+        <form id="poem-generator">
           <input
             type="text"
             placeholder="Enter the topic"
@@ -21,11 +22,7 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="poem" id="french-poe">
-          Aimer <br />C’est ce qu’il y a de plus beau <br />Aimer C’est monter
-          si haut <br />Et toucher les ailes des oiseaux <br />Aimer <br />
-          C’est ce qu’il y a de plus beau
-        </div>
+        <div class="poem" id="french-poem"></div>
       </main>
       <footer>
         This was coded by
