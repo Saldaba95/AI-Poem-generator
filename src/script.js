@@ -14,15 +14,16 @@ function generatePoem(event) {
 
   let context =
     "You are a well articulated AI assistant that has a vast knowledge about French poems and literture. Your mission is to generate a 4 line poem in <p> with <br> for each line format  abd with the title of the poem at the top.Please ensure that the user instructions are used accordingly. Please sign the poem with `SheCodes AI` in a <strong> element at the bottom of the poem";
-  let prompt = `User instructions: Generate a French poem  ${inputInstructions}`;
+  let prompt = `User instructions: Generate a French poem  ${inputInstructions.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let poemElement = document.querySelector("poem");
   poemElement.innerHTML = `Generating a French poem about ${inputInstructions.value}`;
 
-  console.log("generating poem");
+  console.log("Generating Poem");
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);
+
   axios.get(apiUrl).then(displayPoem);
 }
 
