@@ -20,6 +20,7 @@ h1 {
   font-size: 36px;
   line-height: 1.5;
   color: black;
+  margin: 5px;
 }
 
 form {
@@ -54,6 +55,19 @@ form {
   margin: 25px;
   font-size: 18px;
   line-height: 1.5;
+}
+.loading {
+  animation: blink-animation 1.2s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 
 footer {
